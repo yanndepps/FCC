@@ -77,6 +77,20 @@ label[for = "password"] {
 	bottom: 200px;
 }
 
+#add-notes {
+	bottom: 305px;
+}
+
+label[for = "add-notes"] {
+	bottom: 310px;
+}
+
+/* The submit btn is shown when the user clicks on the input field */
+#add-btn {
+	bottom: 240px;
+	display: none;
+}
+
 ::placeholder {
 	color: transparent;
 }

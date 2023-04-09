@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<title>Notes</title>
 	<!-- google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +16,10 @@
 
 <body>
 	<form id="main-form">
-		<input type="text" id="username" placeholder="enter your username">
-		<label for="username" onclick="expand(this)">USERNAME</label>
+		<input type="text" id="add-notes" placeholder="enter a new item">
+		<label for="add-notes" onclick="expand(this)">Add New Note</label>
 		<!-- --- -->
-		<input type="password" id="password" placeholder="enter your password">
-		<label for="password" onclick="expand(this)">Password</label>
-		<!-- --- -->
-		<button>SUBMIT</button>
+		<button id="add-btn">SUBMIT</button>
 	</form>
 
 	<!-- scripts -->
