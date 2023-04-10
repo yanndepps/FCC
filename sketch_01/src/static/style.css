@@ -41,11 +41,22 @@ form * {
 
 #reg-title {
 	position: absolute;
-	bottom: 398px;
-	right: 165px;
+	bottom: 388px;
+	right: 152px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+}
+
+#log-title {
+	position: absolute;
+	bottom: 388px;
+	right: 170px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
 	letter-spacing: 0.5px;
 	color: #ffffff;
 }
@@ -96,12 +107,6 @@ label[for = "add-notes"] {
 	bottom: 310px;
 }
 
-/* The submit btn is shown when the user clicks on the input field */
-/* #add-btn { */
-/* 	bottom: 240px; */
-/* 	display: none; */
-/* } */
-
 ::placeholder {
 	color: transparent;
 }
@@ -109,16 +114,6 @@ label[for = "add-notes"] {
 .my-style::placeholder {
 	color: #a5a5a5;
 }
-
-/* button { */
-/* 	width: 300px; */
-/* 	position: absolute; */
-/* 	bottom: 75px; */
-/* 	padding: 15px 0; */
-/* 	background-color: #2ebf75; */
-/* 	color: #ffffff; */
-/* 	border-radius: 5px; */
-/* } */
 
 #btn {
 	font-family: "Space Grotesk", sans-serif;
@@ -149,6 +144,23 @@ label[for = "add-notes"] {
 	outline: none;
 	cursor: pointer;
 }
+
+#log-link {
+	position: absolute;
+	bottom: 25px;
+	right: 70px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
 .dud {
-  color: #757575;
+  /* color: #757575; */
+  color: #2ebf75;
 }

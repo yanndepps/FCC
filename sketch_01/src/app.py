@@ -30,12 +30,12 @@ class Note(db.Model):
 
 class LoginForm(FlaskForm):
     username = StringField(
-        "Username", validators=[DataRequired(), Length(min=4, max=20)]
+        "USERNAME", validators=[DataRequired(), Length(min=4, max=20)]
     )
     password = PasswordField(
         "Password", validators=[DataRequired(), Length(min=8, max=20)]
     )
-    submit = SubmitField("Sign In")
+    submit = SubmitField("SUBMIT")
 
 
 class RegisterForm(FlaskForm):

@@ -70,20 +70,43 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 // scramble -> register page
 // ——————————————————————————————————————————————————
+const regEl = document.getElementById("reg-title");
 
-const phrases = [
-	'Register',
-]
+if (regEl) {
+	const phrases = [
+		'Register',
+	];
 
-const el = document.getElementById("reg-title")
-const fx = new TextScramble(el)
+	const fx = new TextScramble(regEl);
+	let counter = 0;
+	const next = () => {
+		fx.setText(phrases[counter]).then(() => {
+			setTimeout(next, 3000)
+		});
+		counter = (counter + 1) % phrases.length;
+	}
 
-let counter = 0
-const next = () => {
-	fx.setText(phrases[counter]).then(() => {
-		setTimeout(next, 8000)
-	})
-	counter = (counter + 1) % phrases.length
+	next();
 }
 
-next()
+// ——————————————————————————————————————————————————
+// scramble -> login page
+// ——————————————————————————————————————————————————
+const logEl = document.getElementById("log-title");
+
+if (logEl) {
+	const phrases = [
+		'Login',
+	];
+
+	const fx = new TextScramble(logEl);
+	let counter = 0;
+	const next = () => {
+		fx.setText(phrases[counter]).then(() => {
+			setTimeout(next, 3000)
+		});
+		counter = (counter + 1) % phrases.length;
+	}
+
+	next();
+}
