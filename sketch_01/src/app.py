@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError, DataRequired
+from wtforms.validators import Length, ValidationError, DataRequired
 from datetime import datetime
 
 app = Flask(__name__)
@@ -19,35 +19,6 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(80), nullable=False)
 
 
-# class RegisterForm(FlaskForm):
-#     username = StringField(
-#         validators=[InputRequired(), Length(min=4, max=20)],
-#         render_kw={"placeholder": "Username"},
-#     )
-#     password = PasswordField(
-#         validators=[InputRequired(), Length(min=8, max=20)],
-#         render_kw={"placeholder", "Password"},
-#     )
-#     submit = SubmitField("Register")
-
-#     def validate_username(self, username):
-#         existing_user_username = User.query.filter_by(username=username.data).first()
-#         if existing_user_username:
-#             raise ValidationError("Please choose a different username!")
-
-
-# class LoginForm(FlaskForm):
-#     username = StringField(
-#         validators=[InputRequired(), Length(min=4, max=20)],
-#         render_kw={"placeholder": "Username"},
-#     )
-#     password = PasswordField(
-#         validators=[InputRequired(), Length(min=8, max=20)],
-#         render_kw={"placeholder", "Password"},
-#     )
-#     submit = SubmitField("Login")
-
-
 # create a Note table, with automatic id, text as todo task
 # boolean holding the done value,
 class Note(db.Model):
@@ -57,11 +28,29 @@ class Note(db.Model):
     dateAdded = db.Column(db.DateTime, default=datetime.now())
 
 
-# TODO: Bug fix
 class LoginForm(FlaskForm):
-    username = StringField("Username", validators=[DataRequired()])
-    password = PasswordField("Password", validators=[DataRequired()])
+    username = StringField(
+        "Username", validators=[DataRequired(), Length(min=4, max=20)]
+    )
+    password = PasswordField(
+        "Password", validators=[DataRequired(), Length(min=8, max=20)]
+    )
     submit = SubmitField("Sign In")
+
+
+class RegisterForm(FlaskForm):
+    username = StringField(
+        "Username", validators=[DataRequired(), Length(min=4, max=20)]
+    )
+    password = PasswordField(
+        "Password", validators=[DataRequired(), Length(min=8, max=20)]
+    )
+    submit = SubmitField("Register")
+
+    def validate_username(self, username):
+        existing_user_username = User.query.filter_by(username=username.data).first()
+        if existing_user_username:
+            raise ValidationError("Please choose a different username!")
 
 
 @app.route("/")
@@ -77,9 +66,8 @@ def login():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    # form = RegisterForm()
-    # return render_template("register.html", form=form)
-    return render_template("register.html")
+    form = RegisterForm()
+    return render_template("register.html", form=form)
 
 
 if __name__ == "__main__":
