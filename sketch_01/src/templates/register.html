@@ -15,7 +15,7 @@
 <body>
 
 	<form method="POST" action="" id="main-form">
-		<h1>Register Page</h1>
+		<h1 id="reg-title">Register</h1>
 		{{ form.hidden_tag() }}
 		<!-- <input type="text" id="username" placeholder="enter your username"> -->
 		<!-- <label for="username" onclick="expand(this)">USERNAME</label> -->
@@ -30,7 +30,7 @@
 		<!-- --- -->
 		<!-- <button type="submit">SUBMIT</button> -->
 		{{ form.submit(id="btn") }}
-		<a href="{{url_for('login')}}">Already have an account? Log In</a><br>
+		<a id="reg-link" href="{{url_for('login')}}">Already have an account? Log In &#x27f6;</a><br>
 	</form>
 	<!-- scripts -->
 	<script src="static/script.js" type="text/javascript"></script>
