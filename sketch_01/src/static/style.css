@@ -108,3 +108,18 @@ button {
 	color: #ffffff;
 	border-radius: 5px;
 }
+
+#btn {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 75px;
+	padding: 15px 0;
+	background-color: #2ebf75;
+	color: #ffffff;
+	border-radius: 5px;
+}

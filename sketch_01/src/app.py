@@ -40,12 +40,12 @@ class LoginForm(FlaskForm):
 
 class RegisterForm(FlaskForm):
     username = StringField(
-        "Username", validators=[DataRequired(), Length(min=4, max=20)]
+        "USERNAME", validators=[DataRequired(), Length(min=4, max=20)]
     )
     password = PasswordField(
         "Password", validators=[DataRequired(), Length(min=8, max=20)]
     )
-    submit = SubmitField("Register")
+    submit = SubmitField("SUBMIT")
 
     def validate_username(self, username):
         existing_user_username = User.query.filter_by(username=username.data).first()
