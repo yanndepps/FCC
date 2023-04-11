@@ -61,6 +61,17 @@ form * {
 	color: #ffffff;
 }
 
+#home-title {
+	position: absolute;
+	bottom: 388px;
+	right: 140px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+}
+
 input {
 	display: block;
 	height: 2px;
@@ -115,7 +126,7 @@ label[for = "add-notes"] {
 	color: #a5a5a5;
 }
 
-#btn {
+#hom-btn-log {
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
 	font-size: 14px;
@@ -123,13 +134,39 @@ label[for = "add-notes"] {
 	letter-spacing: 0.5px;
 	width: 300px;
 	position: absolute;
-	bottom: 75px;
+	bottom: 305px;
 	padding: 15px 0;
 	background-color: #2ebf75;
 	color: #ffffff;
 	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
+#hom-btn-reg {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 195px;
+	padding: 15px 0;
+	background-color: #2ebf75;
+	color: #ffffff;
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
 #reg-link {
 	position: absolute;
 	bottom: 25px;

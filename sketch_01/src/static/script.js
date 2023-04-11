@@ -110,3 +110,25 @@ if (logEl) {
 
 	next();
 }
+
+// ——————————————————————————————————————————————————
+// scramble -> home page
+// ——————————————————————————————————————————————————
+const homEl = document.getElementById("home-title");
+
+if (homEl) {
+	const phrases = [
+		'Welcome !',
+	];
+
+	const fx = new TextScramble(homEl);
+	let counter = 0;
+	const next = () => {
+		fx.setText(phrases[counter]).then(() => {
+			setTimeout(next, 3000)
+		});
+		counter = (counter + 1) % phrases.length;
+	}
+
+	next();
+}
