@@ -58,6 +58,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/notes")
+def notes():
+    return render_template("notes.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()

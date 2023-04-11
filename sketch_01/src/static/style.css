@@ -72,6 +72,17 @@ form * {
 	color: #ffffff;
 }
 
+#notes-title {
+	position: absolute;
+	bottom: 388px;
+	right: 170px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+}
+
 input {
 	display: block;
 	height: 2px;
@@ -167,6 +178,28 @@ label[for = "add-notes"] {
 	justify-content: center;
 	text-align: center;
 }
+
+#btn-sub {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 75px;
+	padding: 15px 0;
+	background-color: #2ebf75;
+	color: #ffffff;
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
 #reg-link {
 	position: absolute;
 	bottom: 25px;
@@ -200,4 +233,14 @@ label[for = "add-notes"] {
 .dud {
   /* color: #757575; */
   color: #2ebf75;
+}
+
+#add-btn {
+	width: 300px;
+	position: absolute;
+	bottom: 75px;
+	padding: 15px 0;
+	background-color: #2ebf75;
+	color: #ffffff;
+	border-radius: 5px;
 }

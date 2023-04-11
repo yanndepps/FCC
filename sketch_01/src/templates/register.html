@@ -17,19 +17,14 @@
 	<form method="POST" action="" id="main-form">
 		<h1 id="reg-title">Register</h1>
 		{{ form.hidden_tag() }}
-		<!-- <input type="text" id="username" placeholder="enter your username"> -->
-		<!-- <label for="username" onclick="expand(this)">USERNAME</label> -->
-		<!-- {{ form.username.label }} -->
+		<!-- --- -->
 		{{ form.username(id="username", placeholder="enter your username") }}
 		{{ form.username.label(onclick="expand(this)") }}
 		<!-- --- -->
-		<!-- <input type="password" id="password" placeholder="enter your password"> -->
-		<!-- <label for="password" onclick="expand(this)">Password</label> -->
 		{{ form.password(id="password", placeholder="enter your password") }}
 		{{ form.password.label(onclick="expand(this)") }}
 		<!-- --- -->
-		<!-- <button type="submit">SUBMIT</button> -->
-		{{ form.submit(id="btn") }}
+		{{ form.submit(id="btn-sub") }}
 		<a id="reg-link" href="{{url_for('login')}}">Already have an account? Log In &#x27f6;</a><br>
 	</form>
 	<!-- scripts -->
