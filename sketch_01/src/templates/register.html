@@ -15,16 +15,21 @@
 <body>
 
 	<form method="POST" action="" id="main-form">
-		<h1 id="reg-title">Register</h1>
+		<!-- scramble txt -->
+		<div class="scramble-main">
+			<div id="reg-title">Register</div>
+		</div>
+		<!-- CSRF -->
 		{{ form.hidden_tag() }}
-		<!-- --- -->
+		<!-- inputs -->
 		{{ form.username(id="username", placeholder="enter your username") }}
 		{{ form.username.label(onclick="expand(this)") }}
 		<!-- --- -->
 		{{ form.password(id="password", placeholder="enter your password") }}
 		{{ form.password.label(onclick="expand(this)") }}
-		<!-- --- -->
+		<!-- submit -->
 		{{ form.submit(id="btn-sub") }}
+		<!-- log in -->
 		<a id="reg-link" href="{{url_for('login')}}">Already have an account? Log In &#x27f6;</a><br>
 	</form>
 	<!-- scripts -->

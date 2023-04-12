@@ -120,13 +120,15 @@ const homEl = document.getElementById("home-title");
 if (homEl) {
 	const phrases = [
 		'Welcome !',
+		'Please log in,',
+		'or register !',
 	];
 
 	const fx = new TextScramble(homEl);
 	let counter = 0;
 	const next = () => {
 		fx.setText(phrases[counter]).then(() => {
-			setTimeout(next, 3000)
+			setTimeout(next, 1500)
 		});
 		counter = (counter + 1) % phrases.length;
 	}

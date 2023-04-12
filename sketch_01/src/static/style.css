@@ -39,10 +39,17 @@ form * {
 	letter-spacing: 0.5px;
 }
 
+.scramble-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
 #reg-title {
 	position: absolute;
 	bottom: 388px;
-	right: 152px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
 	font-size: 24px;
@@ -53,7 +60,6 @@ form * {
 #log-title {
 	position: absolute;
 	bottom: 388px;
-	right: 170px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
 	font-size: 24px;
@@ -64,7 +70,6 @@ form * {
 #home-title {
 	position: absolute;
 	bottom: 388px;
-	right: 140px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
 	font-size: 24px;
@@ -75,7 +80,6 @@ form * {
 #notes-title {
 	position: absolute;
 	bottom: 388px;
-	right: 170px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 600;
 	font-size: 24px;
