@@ -39,6 +39,24 @@ form * {
 	letter-spacing: 0.5px;
 }
 
+.error-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#errors {
+	position: absolute;
+	bottom: 148px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #ff5b84;
+}
+
 .scramble-main {
 	height: 100%;
 	width: 100%;
@@ -149,7 +167,7 @@ label[for = "add-notes"] {
 	letter-spacing: 0.5px;
 	width: 300px;
 	position: absolute;
-	bottom: 305px;
+	bottom: 275px;
 	padding: 15px 0;
 	background-color: #2ebf75;
 	color: #ffffff;
@@ -170,7 +188,7 @@ label[for = "add-notes"] {
 	letter-spacing: 0.5px;
 	width: 300px;
 	position: absolute;
-	bottom: 195px;
+	bottom: 165px;
 	padding: 15px 0;
 	background-color: #2ebf75;
 	color: #ffffff;
@@ -223,6 +241,21 @@ label[for = "add-notes"] {
 	position: absolute;
 	bottom: 25px;
 	right: 70px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#log-out-link {
+	position: absolute;
+	bottom: 25px;
+	right: 118px;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 400;
 	font-size: 14px;

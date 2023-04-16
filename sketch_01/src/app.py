@@ -69,7 +69,7 @@ class RegisterForm(FlaskForm):
     def validate_username(self, username):
         existing_user_username = User.query.filter_by(username=username.data).first()
         if existing_user_username:
-            raise ValidationError("Please choose a different username!")
+            raise ValidationError("User already exists: Log in !")
 
 
 @app.route("/")

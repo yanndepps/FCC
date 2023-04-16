@@ -120,8 +120,9 @@ const homEl = document.getElementById("home-title");
 if (homEl) {
 	const phrases = [
 		'Welcome !',
-		'Please log in,',
-		'or register !',
+		'Login',
+		'or',
+		'Register',
 	];
 
 	const fx = new TextScramble(homEl);
