@@ -29,6 +29,16 @@
 		{{ form.password.label(onclick="expand(this)") }}
 		<!-- submit -->
 		{{ form.submit(id="btn-sub") }}
+		<!-- TODO -->
+		<p>
+			{% if form.username.errors %}
+		<ul class="errors">
+			{% for error in form.username.errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		</p>
 		<!-- log in -->
 		<a id="reg-link" href="{{url_for('login')}}">Already have an account? Log In &#x27f6;</a><br>
 	</form>
