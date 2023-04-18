@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notes</title>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div id="new-task">
+			<!-- scramble txt -->
+			<!-- <div class="scramble-main">
+					 <div id="notes-title">Notes</div>
+					 </div> -->
+			<!-- note input -->
+			<input type="text" id="add-notes" placeholder="enter a new item">
+			<label for="add-notes" onclick="expand(this)">Add New Note</label>
+			<!-- --- -->
+			<button id="push">Add</button>
+			<!-- log out -->
+			<!-- <a id="log-out-link" href="{{url_for('logout')}}">Click here to log out &#x2930;</a><br> -->
+		</div>
+		<div id="task"></div>
+	</div>
+	<!-- scripts -->
+	<script src="static/script.js"></script>
+</body>
+
+</html>
