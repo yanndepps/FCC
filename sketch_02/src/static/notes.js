@@ -64,3 +64,9 @@ const rmTask = (taskValue) => {
 	localStorage.removeItem(taskValue);
 	displayTasks();
 };
+
+// add tasks to lS
+const updateStorage = (index, taskValue, completed) => {
+	localStorage.setItem(`${index}_${taskValue}`, completed);
+	displayTasks();
+};
