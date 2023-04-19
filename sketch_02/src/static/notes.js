@@ -29,7 +29,7 @@ const displayTasks = () => {
 
 	for (let key of tasks) {
 		// get all values
-		let value = localStorage.getIem(key);
+		let value = localStorage.getItem(key);
 		let taskInnerDiv = document.createElement("div");
 		taskInnerDiv.classList.add("task");
 		taskInnerDiv.setAttribute("id", key);
@@ -70,3 +70,26 @@ const updateStorage = (index, taskValue, completed) => {
 	localStorage.setItem(`${index}_${taskValue}`, completed);
 	displayTasks();
 };
+
+// add new task
+document.querySelector("#push").addEventListener("click", () => {
+	// enable edit btn
+	disableBtn(false);
+	if (newTaskInput.value.length == 0) {
+		alert("please enter a task!");
+	} else {
+		// store & display from lS
+		if (updateNote == "") {
+			// new task
+			updateStorage(count, newTaskInput.value, false);
+		} else {
+			// update task
+			let existingCount = updateNote.split("_")[0];
+			rmTask(updateNote);
+			updateStorage(existingCount, newTaskInput.value, false);
+			updateNote = "";
+		}
+		count += 1;
+		newTaskInput.value = "";
+	}
+});
