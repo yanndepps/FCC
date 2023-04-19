@@ -3,14 +3,15 @@
 # About
 
 freeCodeCamp projects
+TODO: split projects into their own repos later on
 
 
-# Content
+## Content
 
 -   [flask login](sketch_01/README.md)
 
 
-# Credits
+## Credits
 
 © [freeCodeCamp](https://www.freecodecamp.org/)
 
