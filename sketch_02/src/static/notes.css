@@ -65,7 +65,7 @@ div * {
 
 #new-task button {
 	font-family: "Space Grotesk", sans-serif;
-	font-size: 1em;
+	font-size: 14px;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 	width: 45px;
@@ -78,6 +78,16 @@ div * {
 	outline: none;
 	border: none;
 	border-radius: 5px;
+	cursor: pointer;
+}
+
+#tasks {
+	background-color: #ffffff;
+	position: relative;
+	padding: 0.3em 0.6em;
+	margin-top: 0.6em;
+	display: flex;
+	align-items: center;
 	cursor: pointer;
 }
 
