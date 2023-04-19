@@ -23,7 +23,7 @@ const displayTasks = () => {
 	// clear the tasks
 	tasksDiv.innerHTML = "";
 
-	// fetch all keys in LS
+	// fetch all keys in lS
 	let tasks = Object.keys(localStorage);
 	tasks = tasks.sort();
 
@@ -57,4 +57,10 @@ const disableBtn = (bool) => {
 	Array.from(editBtns).forEach((element) => {
 		element.disabled = bool;
 	});
+};
+
+// rm tasks from lS
+const rmTask = (taskValue) => {
+	localStorage.removeItem(taskValue);
+	displayTasks();
 };
