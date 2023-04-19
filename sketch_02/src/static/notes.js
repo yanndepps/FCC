@@ -36,5 +36,19 @@ const displayTasks = () => {
 		taskInnerDiv.innerHTML = `<span id="taskname">${key.split("_")[1]}</span>`;
 
 		// parse string <-> boolean
+		let editBtn = document.createElement("button");
+		editBtn.classList.add("edit");
+		editBtn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
+		if (!JSON.parse(value)) {
+			editBtn.style.visibility = "visible";
+		} else {
+			editBtn.style.visibility = "hidden";
+			taskInnerDiv.classList.add("completed");
+		}
+		taskInnerDiv.appendChild(editBtn);
+		taskInnerDiv.innerHTML += `<button class="delete"><i class="fa-solid fa-trash"></button>`;
+		tasksDiv.appendChild(taskInnerDiv);
 	}
+
+	// task completed
 };
