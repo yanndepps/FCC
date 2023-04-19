@@ -49,6 +49,7 @@ const displayTasks = () => {
 		taskInnerDiv.innerHTML += `<button class="delete"><i class="fa-solid fa-trash"></button>`;
 		tasksDiv.appendChild(taskInnerDiv);
 	}
-
-	// task completed
 };
+
+// disable edit btn
+// TODO
