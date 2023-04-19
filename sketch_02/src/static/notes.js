@@ -52,4 +52,9 @@ const displayTasks = () => {
 };
 
 // disable edit btn
-// TODO
+const disableBtn = (bool) => {
+	let editBtns = document.getElementsByClassName("edit");
+	Array.from(editBtns).forEach((element) => {
+		element.disabled = bool;
+	});
+};
