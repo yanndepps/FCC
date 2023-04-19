@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(
+		135deg,
+		#61d954,
+		#2ebf75
+		);
+}
+
+/* main */
+.container {
+	background-color: #202020;
+	/* height: 450px; */
+	/* width: 90%; */
+	width: 400px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 25%;
+	left: 50%;
+	/* right: 0; */
+	/* bottom: 0; */
+	margin: auto;
+	border-radius: 8px;
+	box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+	padding: 0 50px;
+}
+
+div * {
+	border: none;
+	outline: none;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+#new-task {
+	position: relative;
+	background-color: #202020;
+	padding: 1.8em 1.25em;
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 1em;
+}
+
+#new-task input {
+	height: 45px;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border-radius: 5px;
+	padding: 0.8em 0.5em;
+	color: #ffffff;
+	background-color: #4d4d4d;
+}
+
+#new-task button {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	width: 45px;
+	padding: 0.8em 0.5em;
+	/* position: absolute; */
+	/* bottom: 75px; */
+	/* padding: 15px 0; */
+	background-color: #2ebf75;
+	color: #ffffff;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* txt scramble */
+.scramble-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#notes-title {
+	/* position: absolute; */
+	/* bottom: 88px; */
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	padding-top: 15px;
+}
+
+.dud {
+  /* color: #757575; */
+  color: #2ebf75;
+}
+
+/* log out */
+#log-out-link {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	/* right: 60px; */
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	/* padding: 0.5em; */
+	padding-top: 15px;
+}
