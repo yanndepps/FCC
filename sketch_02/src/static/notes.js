@@ -80,6 +80,19 @@ const displayTasks = () => {
 			parent.remove();
 		});
 	});
+
+	// delete tasks
+	deleteTasks = document.getElementsByClassName("delete");
+	Array.from(deleteTasks).forEach((element) => {
+		element.addEventListener("click", (e) => {
+			e.stopPropagation();
+			// delete from lS & rm div
+			let parent = element.parentElement;
+			rmTask(parent.id);
+			parent.remove();
+			count -= 1;
+		});
+	});
 };
 
 // disable edit btn
