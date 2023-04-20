@@ -108,6 +108,30 @@ div * {
 	letter-spacing: 0.5px;
 }
 
+.task button {
+	color: #202020;
+	padding: 0.3em 0;
+	width: 2.0em;
+	border-radius: 0.3em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.delete {
+	background-color: #ff5b84;
+}
+
+.edit {
+	background-color: #2ebf75;
+	margin-left: auto;
+	margin-right: 1em;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
 /* txt scramble */
 .scramble-main {
 	height: 100%;
