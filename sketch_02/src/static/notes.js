@@ -49,6 +49,7 @@ const displayTasks = () => {
 		taskInnerDiv.innerHTML += `<button class="delete"><i class="fa-solid fa-trash"></button>`;
 		tasksDiv.appendChild(taskInnerDiv);
 	}
+
 	// tasks completed
 	tasks = document.querySelectorAll(".task");
 	tasks.forEach((element) => {
@@ -60,6 +61,24 @@ const displayTasks = () => {
 				updateStorage(element.id.split("_")[0], element.innerText, true);
 			}
 		};
+	});
+
+	// edit tasks
+	editTasks = document.getElementsByClassName("edit");
+	Array.from(editTasks).forEach((element) => {
+		element.addEventListener("click", (e) => {
+			// stop propagation to outer elements when removed
+			e.stopPropagation();
+			// disable other btns when one task is edited
+			disableBtn(true);
+			// upd input value & rm div
+			let parent = element.parentElement;
+			newTaskInput.value = parent.querySelector("#taskname").innerText;
+			// set updateNote to the task being edited
+			updateNote = parent.id;
+			// rm task
+			parent.remove();
+		});
 	});
 };
 
