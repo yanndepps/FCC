@@ -49,6 +49,18 @@ const displayTasks = () => {
 		taskInnerDiv.innerHTML += `<button class="delete"><i class="fa-solid fa-trash"></button>`;
 		tasksDiv.appendChild(taskInnerDiv);
 	}
+	// tasks completed
+	tasks = document.querySelectorAll(".task");
+	tasks.forEach((element) => {
+		element.onclick = () => {
+			// lS update
+			if (element.classList.contains("completed")) {
+				updateStorage(element.id.split("_")[0], element.innerText, false);
+			} else {
+				updateStorage(element.id.split("_")[0], element.innerText, true);
+			}
+		};
+	});
 };
 
 // disable edit btn
